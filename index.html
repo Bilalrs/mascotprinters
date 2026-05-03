@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mascot Printers</title>
+  <style>
+    :root {
+      --red: #f04a2a;
+      --ink: #1f2933;
+      --muted: #667085;
+      --paper: #faf8f5;
+      --card: #ffffff;
+      --line: #ece7df;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 88vh;
+      display: grid;
+      place-items: center;
+      padding: 48px 20px;
+      background:
+        linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.94)),
+        radial-gradient(circle at top left, rgba(240,74,42,.18), transparent 35%),
+        var(--paper);
+      text-align: center;
+    }
+
+    .hero {
+      max-width: 920px;
+    }
+
+    .logo-mark {
+      font-size: clamp(74px, 14vw, 160px);
+      line-height: .75;
+      color: var(--red);
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -12px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 82px);
+      letter-spacing: -2px;
+      text-transform: uppercase;
+    }
+
+    .tagline {
+      margin: 18px auto 30px;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: clamp(18px, 2.5vw, 24px);
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      background: transparent;
+    }
+
+    .button.primary {
+      background: var(--red);
+      color: white;
+      border-color: var(--red);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 64px 20px;
+    }
+
+    section {
+      margin-bottom: 72px;
+    }
+
+    .section-heading {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--red);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(30px, 4vw, 46px);
+      letter-spacing: -1px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 20px 60px rgba(31,41,51,.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .muted { color: var(--muted); }
+
+    .machine-list, .client-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .machine-list li, .client-list li {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .service {
+      color: var(--red);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .contact {
+      background: var(--ink);
+      color: white;
+      border-radius: 32px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .contact .muted { color: #cbd5e1; }
+
+    footer {
+      padding: 26px 20px 42px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .grid, .contact { grid-template-columns: 1fr; }
+      .machine-list li { flex-direction: column; gap: 4px; }
+      header { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <div class="logo-mark">M</div>
+      <h1>Mascot Printers</h1>
+      <p class="tagline">Reliable commercial printing, die work, lamination, cutting, and plate-making services from Karachi since 1996.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#contact">Get in Touch</a>
+        <a class="button" href="#services">View Services</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="section-heading">Company Profile</div>
+      <h2>Experienced printing support for businesses and brands.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Established</h3>
+          <p class="muted">Mascot Printers started business in 1996 and has served commercial clients with professional printing work.</p>
+        </div>
+        <div class="card">
+          <h3>Factory</h3>
+          <p class="muted">Factory owned by Rehan Shamsi, with an approximate area of 400 square yards.</p>
+        </div>
+        <div class="card">
+          <h3>Registration</h3>
+          <p class="muted">NTN # 0287986-7<br />GST No. 12-00-8442-495-73</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-heading">Machinery & Capabilities</div>
+      <h2>Printing press equipment for end-to-end production.</h2>
+      <ul class="machine-list">
+        <li><strong>Roland 4 Colors</strong><span class="service">Printing</span></li>
+        <li><strong>Heidelberg KORD</strong><span class="service">Printing</span></li>
+        <li><strong>Kirma</strong><span class="service">Die</span></li>
+        <li><strong>Lion</strong><span class="service">Die</span></li>
+        <li><strong>Lamination Machine</strong><span class="service">Lamination</span></li>
+        <li><strong>Schneider Senator</strong><span class="service">Cutting</span></li>
+        <li><strong>Jaffry</strong><span class="service">Cutting</span></li>
+        <li><strong>Plate Maker</strong><span class="service">Plate Making</span></li>
+      </ul>
+    </section>
+
+    <section id="clients">
+      <div class="section-heading">Clients</div>
+      <h2>Trusted by established organizations.</h2>
+      <ul class="client-list">
+        <li>M/s. Pathfinder</li>
+        <li>M/s. Afroze Textile Ind. (Pvt.) Ltd.</li>
+        <li>M/s. Abco Industries</li>
+        <li>M/s. S. C. Johnsons & Sons of Pakistan (Pvt.) Ltd.</li>
+        <li>M/s. Green Star</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <div>
+        <div class="section-heading">Contact</div>
+        <h2>Need printing work done?</h2>
+        <p class="muted">Reach out to discuss printing, lamination, die work, cutting, and related press services.</p>
+      </div>
+      <div>
+        <p><strong>Address</strong><br />Basement, Shahwar Trade Centre, 72/B, Block-2, Allama Iqbal Road, P.E.C.H.S., Karachi</p>
+        <p><strong>Phone</strong><br />4551715</p>
+        <p><strong>Fax</strong><br />4559489</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Mascot Printers. All rights reserved.
+  </footer>
+</body>
+</html>
