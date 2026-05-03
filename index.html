@@ -490,6 +490,11 @@
       </div>
     </section>
   </main>
+  <script>
+  window.addEventListener("hashchange", function () {
+    history.replaceState(null, null, window.location.pathname);
+  });
+</script>
 
   <footer>
   <div style="max-width:900px; margin:auto; text-align:center;">
